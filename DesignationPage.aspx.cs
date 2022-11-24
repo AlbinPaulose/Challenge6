@@ -100,6 +100,8 @@ namespace Challenge6
                     dropDown.DataTextField = "department_name";
                     dropDown.DataValueField = "department_id";
                     dropDown.DataBind();
+                    dropDown.Items.Insert(0, new ListItem("--select--", "0"));
+
 
                     ((DropDownList)e.Row.FindControl("dropdown2")).SelectedValue=DataBinder.Eval(e.Row.DataItem,"DesignationId").ToString();
                 }
